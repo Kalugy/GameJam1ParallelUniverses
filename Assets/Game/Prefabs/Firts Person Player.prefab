@@ -121,9 +121,10 @@ GameObject:
   - component: {fileID: 6923621651015417631}
   - component: {fileID: 6318461888090737341}
   - component: {fileID: 220450203289253875}
+  - component: {fileID: 4670040598595803695}
   m_Layer: 0
   m_Name: Firts Person Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +183,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdfef298747750e49a0b086c17a1f90a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 25
+--- !u!114 &4670040598595803695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8199282546114428851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4448eed931162364f81eb023d153e65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerReach: 3
 --- !u!1 &8251661053022238865
 GameObject:
   m_ObjectHideFlags: 0
