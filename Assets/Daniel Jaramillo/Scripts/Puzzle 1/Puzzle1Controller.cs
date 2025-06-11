@@ -6,6 +6,8 @@ public class Puzzle1Controller : MonoBehaviour
     private int currentCounter = 0;
     private int maxCounter = 4;
 
+    [SerializeField] private GameObject portal;
+
     public void chechNumber(int number)
     {
         if (number == currentCounter + 1 && !isActivated) 
@@ -15,6 +17,7 @@ public class Puzzle1Controller : MonoBehaviour
             if (currentCounter == maxCounter)
             {
                 Debug.Log("Desbloqueado");
+                portal.SetActive(true);
                 isActivated = true;
             }
             
