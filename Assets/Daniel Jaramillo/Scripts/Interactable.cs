@@ -22,7 +22,7 @@ public class Interactable : MonoBehaviour
     public void DisableOutLine()
     {
         outline.enabled = false;
-    }
+    } 
 
     public void EnableOutLine()
     {
