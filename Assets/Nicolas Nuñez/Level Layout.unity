@@ -1949,7 +1949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1153769114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2332,6 +2332,57 @@ Transform:
   - {fileID: 379309260}
   m_Father: {fileID: 520297673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1474575555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8295987226092052929, guid: d2d6559947da8f54697fc848fca31c5e, type: 3}
+  m_PrefabInstance: {fileID: 3879476013231927290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1474575563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474575555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eefe5a4bf9b95764dae05b2d46400dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Open
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1474575555}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1474575564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474575555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 3.4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1492610504
 GameObject:
   m_ObjectHideFlags: 0
@@ -3200,6 +3251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReach: 100
+  hasKeys: 0
 --- !u!4 &815544715834607398
 Transform:
   m_ObjectHideFlags: 0
@@ -3390,7 +3442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 100
-  playerBody: {fileID: 0}
+  playerBody: {fileID: 527952178262494921}
 --- !u!1001 &3879476013231927290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3439,18 +3491,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2286678530431430395, guid: d2d6559947da8f54697fc848fca31c5e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286291157493049618, guid: d2d6559947da8f54697fc848fca31c5e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8295987226092052929, guid: d2d6559947da8f54697fc848fca31c5e, type: 3}
       propertyPath: m_TagString
-      value: Interactuable
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 9044085772139865100, guid: d2d6559947da8f54697fc848fca31c5e, type: 3}
       propertyPath: m_Name
       value: Door_1_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 9044085772139865100, guid: d2d6559947da8f54697fc848fca31c5e, type: 3}
+      propertyPath: m_TagString
+      value: Llaves
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8295987226092052929, guid: d2d6559947da8f54697fc848fca31c5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1474575563}
+    - targetCorrespondingSourceObject: {fileID: 8295987226092052929, guid: d2d6559947da8f54697fc848fca31c5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1474575564}
   m_SourcePrefab: {fileID: 100100000, guid: d2d6559947da8f54697fc848fca31c5e, type: 3}
 --- !u!4 &4071069835626049720 stripped
 Transform:
@@ -3469,7 +3539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefe5a4bf9b95764dae05b2d46400dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: LLave
+  message: Keys
   onInteraction:
     m_PersistentCalls:
       m_Calls:
@@ -3641,7 +3711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7747618739280964719, guid: 040311f5571b7bf479b86f6fc9c36851, type: 3}
       propertyPath: m_TagString
-      value: Interactable
+      value: Llaves
       objectReference: {fileID: 0}
     - target: {fileID: 8489718141646046648, guid: 040311f5571b7bf479b86f6fc9c36851, type: 3}
       propertyPath: m_LocalPosition.x

@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Interactable
   - Llaves
-  - Interactuable
   layers:
   - Default
   - TransparentFX
