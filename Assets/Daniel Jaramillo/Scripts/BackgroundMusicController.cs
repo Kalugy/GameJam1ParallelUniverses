@@ -34,5 +34,6 @@ public class BackgroundMusicController : MonoBehaviour
     {
         audioSource.clip = audioLevel3;
         audioSource.Play();
+        audioSource.volume = 0.5f;
     }
 }

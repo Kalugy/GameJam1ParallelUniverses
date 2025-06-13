@@ -43,5 +43,10 @@ public class hudControlller : MonoBehaviour
         dialogues[1].SetActive(true);
         background.SetActive(true);
     }
+    public void StartLevel3Text()
+    {
+        dialogues[2].SetActive(true);
+        background.SetActive(true);
+    }
    
 }

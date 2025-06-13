@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.Events;
 
 
 [RequireComponent(typeof(TMP_Text))]
@@ -23,6 +24,8 @@ public class TypeWriter : MonoBehaviour
     [Header("Typewriter Settings")] 
     [SerializeField] private float characterPerSecond = 20;
     [SerializeField] private float interpuntuationDelay = 0.5f;
+
+    [Header("Final Event")] public UnityEvent finishAction;
 
 
     private void Awake()
@@ -78,6 +81,7 @@ public class TypeWriter : MonoBehaviour
 
         hudControlller.instance.isUiOpen = false;
         hudControlller.instance.CloseBackground();
+        finishAction.Invoke();
         gameObject.SetActive(false);
 
 

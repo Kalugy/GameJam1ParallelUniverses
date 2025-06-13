@@ -7,38 +7,16 @@ public class Puzzle3Manager : MonoBehaviour
     {
         instance = this;
     }
-    
     private bool isActivated;
     private int currentCounter = 0;
-    private int maxCounter = 6;
-    public FloorButton[] buttonScript;
-    [SerializeField] private GameObject keyGo;
+    private int maxCounter = 4;
+    public GameObject exitPortal;
 
-    public void checkNumber(int number)
+    public void TakeItem()
     {
-        if (number == currentCounter + 1 && !isActivated) 
-        {
-            currentCounter ++;
-            Debug.Log("Vas bien");
-            if (currentCounter == maxCounter)
-            {
-                Debug.Log("Desbloqueado");
-                keyGo.SetActive(true);
-                isActivated = true;
-            }
-            
-        }
-        else
-        {
-            Debug.Log("Intenta otra vez");
-            currentCounter = 0;
-            foreach (var buttonScript in buttonScript)
-            {
-                FloorButton  script = buttonScript.GetComponent<FloorButton>();
-                script.RestartButton();
-            }
-        }
-        
-        
+        currentCounter++;
+        if(currentCounter== 4) exitPortal.SetActive(true);
     }
+    
+   
 }
