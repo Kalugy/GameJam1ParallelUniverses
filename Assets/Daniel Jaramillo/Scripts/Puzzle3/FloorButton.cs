@@ -22,7 +22,7 @@ public class FloorButton : MonoBehaviour
         {
             isActivated = true;
             renderer.material = activatedMaterial;
-            Puzzle3Manager.instance.checkNumber(orderNumber);
+            //Puzzle3Manager.instance.checkNumber(orderNumber);
         }
     }
 
