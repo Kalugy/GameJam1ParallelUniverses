@@ -18,7 +18,7 @@ public class NewDoor : MonoBehaviour
 
     private void Update()
     {
-        if (!GameManager.Instance.haveKey)
+        if (!GameManagerX.Instance.haveKey)
         {
             interactableScript.message = "Is blocked, you will need the key";
         }
@@ -30,7 +30,7 @@ public class NewDoor : MonoBehaviour
     public void InteracDoor()
     {
 
-        if (GameManager.Instance.haveKey)
+        if (GameManagerX.Instance.haveKey)
         {
             if (!isOpen)
             {

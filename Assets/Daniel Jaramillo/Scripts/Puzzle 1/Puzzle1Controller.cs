@@ -17,7 +17,12 @@ public class Puzzle1Controller : MonoBehaviour
     public Color defaultColor;
     public Volume globalVolume;
     private Bloom bloom;
-    
+
+    [Header("Audios")] 
+    public AudioClip goodButton;
+    public AudioClip wrongButton;
+    public AudioClip openPortal;
+    private AudioSource audioSource;  
 
     [SerializeField] private GameObject portal;
 
@@ -28,6 +33,8 @@ public class Puzzle1Controller : MonoBehaviour
             bloom.tint.overrideState = true;
             defaultColor = bloom.tint.value;
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void chechNumber(int number)
@@ -53,6 +60,8 @@ public class Puzzle1Controller : MonoBehaviour
 
     IEnumerator CorrectColor()
     {
+        audioSource.clip = goodButton;
+        audioSource.Play();
         bloom.tint.value = correctColor;
         yield return new WaitForSeconds(1);
         bloom.tint.value = defaultColor;
@@ -60,6 +69,8 @@ public class Puzzle1Controller : MonoBehaviour
 
     IEnumerator WrongColor()
     {
+        audioSource.clip = wrongButton;
+        audioSource.Play();
         bloom.tint.value = wrongColor;
         yield return new WaitForSeconds(1);
         bloom.tint.value = defaultColor;

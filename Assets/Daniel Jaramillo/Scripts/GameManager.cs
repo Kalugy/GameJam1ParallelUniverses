@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManagerX : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManagerX Instance { get; private set; }
 
     public bool haveKey;
 
