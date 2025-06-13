@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-public class SlartLevel2 : MonoBehaviour
+public class StartLevel1 : MonoBehaviour
 {
     private bool alreadystart;
     private void OnTriggerEnter(Collider other)
@@ -10,8 +9,7 @@ public class SlartLevel2 : MonoBehaviour
         {
             if (!alreadystart)
             {
-                BackgroundMusicController.Instance.StartLevel2Music();
-                hudControlller.instance.StartLevel2Text();
+                hudControlller.instance.StartLevel1Text();
                 alreadystart = true;
             }
            

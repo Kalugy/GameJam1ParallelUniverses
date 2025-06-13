@@ -4,7 +4,6 @@ using UnityEngine;
 public class GameManagerX : MonoBehaviour
 {
     public static GameManagerX Instance { get; private set; }
-
     public bool haveKey;
 
     private void Awake()
