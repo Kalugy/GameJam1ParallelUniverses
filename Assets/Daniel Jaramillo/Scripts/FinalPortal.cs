@@ -45,7 +45,7 @@ public class FinalPortal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Palyer"))
+        if (other.CompareTag("Player"))
         {
             finalText.SetActive(true);
             backGround.SetActive(true);
