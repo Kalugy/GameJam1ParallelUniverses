@@ -25,6 +25,9 @@ public class SceneStarter : MonoBehaviour
     [Tooltip("When the text's anchoredPosition.y reaches this value, scrolling stops.")]
     public float scrollEndY = 800f;
 
+    
+    [Header("Intro Panel")]
+    public GameObject introPanel;
 
     void Start()
     {
@@ -41,7 +44,7 @@ public class SceneStarter : MonoBehaviour
         if (settingsButton != null)
             settingsButton.onClick.AddListener(OnSettings);
 
-
+        introPanel.SetActive(false);
         creditsPanel.SetActive(false);
 
     }
@@ -49,7 +52,7 @@ public class SceneStarter : MonoBehaviour
     void OnStart()
     {
         // Replace "Game" with your actual gameplay scene name or build index
-        SceneManager.LoadScene("GameLvl1");
+       introPanel.SetActive(true);
     }
 
     public void ShowCredits()
