@@ -15,7 +15,11 @@ public class Puzzle3Manager : MonoBehaviour
     public void TakeItem()
     {
         currentCounter++;
-        if(currentCounter== 4) exitPortal.SetActive(true);
+        if (currentCounter == 4)
+        {
+            exitPortal.SetActive(true);
+            BackgroundMusicController.Instance.MusicUp();
+        }
     }
     
    

@@ -45,8 +45,7 @@ public class IntroImageSequencer : MonoBehaviour
     {
         // listen for click, Enter or Space
         if (currentIndex < panels.Length &&
-            (Input.GetMouseButtonDown(0) ||
-             Input.GetKeyDown(KeyCode.Return) ||
+            (Input.GetKeyDown(KeyCode.Return) ||
              Input.GetKeyDown(KeyCode.Space)))
         {
             ShowNextPanel();

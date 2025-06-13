@@ -34,6 +34,11 @@ public class BackgroundMusicController : MonoBehaviour
     {
         audioSource.clip = audioLevel3;
         audioSource.Play();
-        audioSource.volume = 0.5f;
+        audioSource.volume = 0f;
+    }
+
+    public void MusicUp()
+    {
+        audioSource.volume = Mathf.Lerp(0, 1, 4*Time.deltaTime);
     }
 }
